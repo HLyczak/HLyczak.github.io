@@ -117,7 +117,6 @@ t {
 .activities__title,
 .activities-ancillary__title {
   margin-top: 20px;
-  font-size: 33px;
   padding: 10px;
 }
 .contact__title {
@@ -328,5 +327,16 @@ footer {
   .gallery {
     grid-template-columns: 100%;
     padding: 8px;
+  }
+  .mision__title,
+  .teaching-stuff__title,
+  .contact_title,
+  .offer__title,
+  .activities__title,
+  .activities-ancillary__title,
+  .gallery__title {
+    font-size: 30px;
+    margin-top: 30px;
+    padding-top: 0px;
   }
 }
