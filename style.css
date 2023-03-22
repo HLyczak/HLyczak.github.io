@@ -85,22 +85,57 @@ section {
 }
 
 .mision,
+.contact,
 .teaching-stuff {
   display: flex;
   gap: 10px;
 }
 
 .mision__content,
-.teaching-stuff__content {
+.teaching-stuff__content,
+t {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
+}
+
+.offer__content,
+.activities__content,
+.activities-ancillar__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .mision__title,
-.teaching-stuff__title {
+.teaching-stuff__title,
+.contact_title {
   text-align: center;
   font-size: 33px;
+}
+.offer__title,
+.activities__title,
+.activities-ancillary__title {
+  margin-top: 20px;
+  font-size: 33px;
+  padding: 10px;
+}
+.contact__title {
+  margin-top: 80px;
+  font-size: 40px;
+  text-align: center;
+}
+.contact__image {
+  margin-top: 50px;
+}
+.contact__description {
+  margin-top: 60px;
+}
+
+.contact__description li {
+  margin-left: 30px;
+  list-style-type: none;
+  line-height: 45px;
 }
 
 .mision__description {
@@ -108,12 +143,29 @@ section {
   line-height: 25px;
   margin-left: 30px;
 }
+
+.offer__description,
+.activities__description,
+.activities-ancillary__description {
+  list-style-type: "✔️";
+  line-height: 25px;
+  margin-left: 30px;
+}
 .teaching-stuff__description {
   line-height: 25px;
+  text-align: center;
 }
 
-.mision__description li {
+.mision__description li,
+.offer__description li,
+.activities__description li,
+.activities-ancillary__description li {
   padding: 10px;
+}
+.contact_description li {
+  padding: 10px;
+  line-height: 25px;
+  margin-left: 30px;
 }
 
 .teaching-stuff {
@@ -165,7 +217,40 @@ section {
   margin-top: 15px;
   text-align: center;
 }
+.gallery__title {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 700;
+}
 
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  justify-content: center;
+  margin: 60px auto;
+}
+.gallery__item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.gallery__item span {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+.gallery__item:hover span {
+  display: initial;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+}
+.gallery__item:hover img {
+  filter: opacity(0.5);
+}
 @keyframes rotateAnimation {
   0% {
     transform: rotateY(0deg);
@@ -211,7 +296,9 @@ footer {
     padding: 20px 8px;
   }
 
-  .mision {
+  .mision,
+  .contact,
+  .offer {
     flex-direction: column-reverse;
   }
 
@@ -220,12 +307,14 @@ footer {
   }
 
   .mision__content,
-  .teaching-stuff__content {
+  .teaching-stuff__content,
+  .offer__content {
     padding: 20px 8px;
   }
 
   .mision__image,
-  .teaching-stuff__image {
+  .teaching-stuff__image,
+  .contact__image {
     width: 100%;
     height: 100%;
   }
@@ -235,5 +324,9 @@ footer {
   }
   .kindergarten__title {
     padding-top: 20px;
+  }
+  .gallery {
+    grid-template-columns: 100%;
+    padding: 8px;
   }
 }
